@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Dashboard</title>
+</head>
+
+    <body id = "body" style = "text-align:center;">
+      
+
+        <p align="right" id="">
+            <a href="ex-5 task-1.html"><button id="logout" style="background-color: rgb(240, 167, 33);">LOGOUT</button></a>
+          </p>
+          
+        <h1 style = "color:rgb(191, 18, 98);" >
+            Welcome Student
+        </h1>
+          
+        <p id = "GFG_UP" style =
+                "font-size: 15px; font-weight: bold;">
+    </p>
+          
+        <!-- <button onclick = "course1()">
+            click here
+        </button> -->
+          
+        <p id = "GFG_DOWN" style =
+                "color:rgb(198, 148, 61); font-size: 20px; font-weight: bold;">
+        </p>
+   
+   <script>
+    let i;
+    key="Course_name";
+    temp=localStorage.getItem(key);
+    t=JSON.parse(temp);
+    t.forEach(ele => {
+        if(ele.Course=="HTML"){
+            
+            course1(this);
+            
+        }
+        else if(ele.Course=="CSS"){
+            
+            course2();
+        }
+        else if(ele.Course=="JS"){
+            course3();
+        }
+    });
+
+    function course1(){
+        var up = document.getElementById('GFG_UP');
+        var down = document.getElementById('GFG_DOWN');
+          
+        document.write("<b>New Course is HTML");
+            var img = document.createElement('img');
+            document.getElementById('body').appendChild(img);
+            down.innerHTML = "Course Added";
+        }
+
+    function course2(){
+        var up = document.getElementById('GFG_UP');
+        var down = document.getElementById('GFG_DOWN');
+          
+        
+            var img = document.createElement('img');
+            
+document.write("<br><b>New Course is CSS");
+            document.getElementById('body').appendChild(img);
+            down.innerHTML = "Course Added";
+        }
+
+        function course3(){
+        var up = document.getElementById('GFG_UP');
+        // alert("New course is up");
+        document.write("<br><b>New Course is JS");
+        var down = document.getElementById('GFG_DOWN');
+          
+        
+            var img = document.createElement('img');
+
+            document.getElementById('body').appendChild(img);
+            down.innerHTML = "Course Added";
+        }
+
+   </script>
+</body>
+</html>

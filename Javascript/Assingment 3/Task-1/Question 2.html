@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question 2</title>
+    <script>
+let str=prompt("Enter the email Id");
+let substr=str.split("@");
+document.write(substr+"<br/>")
+let part1=substr[0];
+// document.write(part1);
+let part2=substr[1];
+// document.write(part2);
+avg=part1.length/2;
+let c=part1.substr(0,avg)+"***"+part1.substr(avg+3,part1.length)+"@"+part2;
+document.write(c)
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

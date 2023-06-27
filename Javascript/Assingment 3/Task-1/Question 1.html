@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question 1</title>
+    <script>
+    function validateEmail(email_id) {
+    const regex_pattern =/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+    
+    if (regex_pattern.test(email_id)) {
+        document.write('The email address is valid<br/>');
+    }
+    else {
+        document.write('The email address is not valid<br/>');
+    }
+}
+let n=prompt("Enter the email address to verify: ");
+validateEmail(n);
+// validateEmail('abc123@gmail.com');
+// validateEmail('hello@com');
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task-4</title>
+
+    <style>
+        * {
+            margin: 10px;
+        }
+
+        table,
+        th {
+            border: 2px solid black;
+            border-collapse: collapse;
+            padding: 10px 65px;
+            border-spacing: 30px;
+        }
+
+        td {
+            align-items: center;
+            padding: 0px 65px;
+        }
+
+        button,
+        .submitbtn {
+            color: #0065e9;
+            padding: 9px 25px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: bold;
+            border-color: #1c7fff;
+            background-color: rgb(196, 243, 255);
+        }
+
+        button:hover,
+        .submitbtn:hover {
+            color: black;
+        }
+
+        input {
+            padding: 10px;
+        }
+
+        .onEdit {
+            background-color: rgb(134, 198, 37);
+            border: 2px rgb(80, 177, 0) solid;
+            color: rgb(255, 255, 255);
+        }
+
+        .onDelete {
+            background-color: rgb(219, 18, 18);
+            border: 2px rgb(167, 61, 0) solid;
+            color: rgb(21, 18, 18);
+        }
+    </style>
+</head>
+
+<body>
+    Akshat Jain
+    <!DOCTYPE html>
+
+    <head>
+        <title>Form</title>
+
+    </head>
+
+    <body>
+
+        <form id="form" autocomplete="off">
+            <label for="fname">First Name</label>
+            <input type="text" id="fname" name="fname" placeholder="First Name" required minlength="5">
+            <label for="lname">Last Name</label>
+            <input type="text" id="lname" name='lname' placeholder="Last Name" required minlength="5">
+            <input type="submit" value=" + Add" class="submitbtn">
+
+        </form>
+        <div class="section">
+            <h4><input type="checkbox" id="main_select" name="main_select" onchange="check(this)">Select All</h4><span
+                id="selectbox"></span>
+            <button class="onDelete" onclick="deleteBox()">Delete</button>
+        </div>
+        <table class="u_data" id="data" border="1">
+
+            <th>Select-All</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Actions</th>
+        </table>
+        <script src="Task-4.js"></script>
+
+        <!-- <script>
+    
+ </script> -->
+    </body>
+
+</html>
+
+
+</body>
+
+</html>

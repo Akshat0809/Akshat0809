@@ -1,0 +1,47 @@
+https://sumit.salesmate.io/apis/deal/v1/board-view/Sales/stage-wise-summary
+post api to get data of sales in sumit of deals
+{
+  "query": {
+    "group": {
+      "operator": "AND",
+      "rules": [
+        {
+          "condition": "EQUALS",
+          "data": {
+            "group": "Sales",
+            "value": ""
+          },
+          "field": {
+            "fieldName": "deal.pipeline",
+            "displayName": "Pipeline",
+            "type": "Select"
+          }
+        },
+        {
+          "group": {
+            "operator": "AND",
+            "rules": [
+              {
+                "condition": "EQUALS",
+                "data": "$MYSELF$",
+                "field": {
+                  "fieldName": "deal.owner"
+                },
+                "moduleName": "Deal"
+              },
+              {
+                "condition": "EQUALS",
+                "data": "Open",
+                "field": {
+                  "fieldName": "deal.status"
+                },
+                "moduleName": "Deal"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  }
+}
+this is the body we used

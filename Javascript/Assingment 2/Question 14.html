@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let arr=[
+
+{
+
+    Id:1,
+
+    Name:"hitesh",
+
+    Age:21,
+
+},
+
+{
+
+    Id:2,
+
+    Name:"pawan",
+
+    Age:20,
+
+},
+
+{
+
+    Id:3,
+
+    Name:"akshat",
+
+    Age:23,
+
+},
+
+{
+
+    Id:4,
+
+    Name:'nilesh',
+
+    Age:22,
+
+},
+
+{
+
+    Id:5,
+
+    Name:'raj',
+
+    Age:29,
+
+},
+
+{
+
+    Id:6,
+
+    Name:'akshay',
+
+    Age:24,
+
+},
+
+{
+
+    Id:7,
+
+    Name:'jayesh',
+
+    Age:18,
+
+},
+
+{
+
+    Id:8,
+
+    Name:'vijay',
+
+    Age:27,
+
+},
+
+{
+
+    Id:9,
+
+    Name:'bharat',
+
+    Age:31,
+
+}
+
+];
+
+
+//ascending order of age
+
+let sortname = arr.sort((a, b) => (a.Name < b.Name) ? 1 : (a.Name > b.Name) ? -1 : 0);
+
+document.write(sortname)
+
+let sortAgeName = sortname.sort((a, b) => (a.Age > b.Age) ? 1 : (a.Age < b.Age) ? -1 : 0);
+
+
+console.log(sortname);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

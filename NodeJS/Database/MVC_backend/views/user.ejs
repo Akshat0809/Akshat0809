@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Folders</title>
+</head>
+<body>
+  <h1>User Details</h1>
+  <div>
+    <%user.forEach((itr)=>{%>
+      Username<p><%=itr.username%></p>
+      Email_address<p><%=itr.email_address%></p>
+     <button><a href="/delete_user/<%= itr.id %>">delete</a></button> <br>
+    <button>  <a href="/edit_user/<%= itr.id%>">update</a></button> <br>
+    <button>  <a href="/folders/<%= itr.id%>">folders</a></button> <br>
+  <%  })%>
+</div>
+<div>
+  <br><a href="/">Create new user</a>
+</div>
+</body>
+</html>

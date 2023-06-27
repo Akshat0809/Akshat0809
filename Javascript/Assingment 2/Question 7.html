@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // user se jab input lete h to b default wo mm-dd-yyyy m hota h yha swap s apn n dd-mm-yyyy m kra h jisse month ka pta chla h
+        let Months=['January','February','March','April','May','June','July','August','September','October','November','December'];
+        let dte=prompt("Enter the date");
+        dte=dte.split("-");
+        let temp=dte[0];
+        dte[0]=dte[1];
+        dte[1]=temp;
+
+        dte= dte.join("-");
+        let d=new Date(dte);
+        document.write(Months[d.getMonth()])
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

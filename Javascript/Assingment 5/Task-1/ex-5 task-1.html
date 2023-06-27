@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rapidops LMS</title>
+
+    <style>
+        body{
+            background-color: rgb(154, 227, 163);
+        }
+          .container{
+            background-color: aqua;
+            padding:20px;
+            text-align: center;
+            margin: 200px 40px 70px 40px;
+          }
+          .data
+          {
+            margin: 10px;
+            padding: auto;
+          }
+        *{
+            margin: 0;
+            padding: 0;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        }
+        .data label,input{
+            font-size: 30px;
+            margin-right: 10px;
+        }
+        .btn{
+            padding: 10px 20px 10px 20px;
+            background-color: aquamarine;
+            font-size: 17px;
+            font-weight: bold;
+            border: solid 2px;
+            margin: top 20px;
+            cursor: pointer;
+        }
+        input{
+            padding: 2px;
+            font-size: 20px;
+            color: rgb(35, 34, 32);
+        }
+    </style>
+
+</head>
+<body id="body">
+    <center>
+    <div id="main" class="container">
+        <h1>Login</h1>
+        <div class="data">
+            <label for="username">UserName</label><br>
+            <input type="text" name="user" id="username" placeholder="username"
+            required style="box-shadow: none;">
+        </div>
+
+        <br><br>
+
+        <div class="data">
+            <label for="pwd">Password</label><br>
+        <input type="password" name="pass" placeholder="password" id="pwd" required > <br><br>
+
+        <div>
+
+        <button id="data"class="btn" onclick="setValues()">Submit</button>
+        
+        <a href="sign-up.html"><button id="new" class="btn">Signup</button></a>
+        
+        </div>
+
+    </center>
+
+
+    <script>
+       function setValues(){
+
+        let key,temp,t;
+        let u_name=document.getElementById("username").value;
+        // console.log(u_name);
+        let pwd=document.getElementById("pwd").value;
+
+        for(let i=0;i<localStorage.length;i++){
+            key=localStorage.key(i);
+            // console.log(key);
+            temp=localStorage.getItem(key);
+            // console.log(temp);
+            t=JSON.parse(temp);
+            // console.log(t);
+            t.forEach(element => {
+              if(u_name==element.username)
+              
+              {
+                sessionStorage.setItem("username",u_name);
+                if(pwd==element.Password)
+                
+                {
+                    sessionStorage.setItem("password",pwd);
+                   
+                    if("student"==element.user_type)
+                    {
+                        window.location.href="Student.html"
+                        console.log("student");
+                    }
+                    else if("admin"==element.user_type)
+                    {
+                        window.location.href="./Admin.html";
+                        console.log("admin");
+                    }}}});
+        
+
+        }
+}
+    </script>
+    
+</body>
+</html>

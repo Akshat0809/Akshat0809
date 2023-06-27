@@ -1,0 +1,2 @@
+FulfillmentPartnerCode,OrderNumber,OrderDate,CustomerPO,CustomerTag,CustomerProject,ShippingFirstName,ShippingLastName,ShippingAddress1,ShippingAddress2,ShippingCity,ShippingState,ShippingZip,ShippingCountry,ShippingPhone,LineItemNumber,Quantity,SKU,ManufacturerPartNumber,Cost,Notes
+"CBG","228","Wed, 21 Jun 2023 07:21:33 +0000","","","","Akshat","Jain","123 Main Street","","Ahmedabad","Arunachal Pradesh","28203","India","","132","1","1200","950-WLT-BILL-1","3840.0000","null"

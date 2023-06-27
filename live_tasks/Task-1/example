@@ -1,0 +1,20 @@
+const fetch = require('node-fetch');
+
+let url = 'https://api.bigcommerce.com/stores/[store_hash]/v3/catalog/products/[product_id]/options';
+
+let options = {
+  method: 'POST',
+  headers: {
+    Accept: 'application/json',
+    'Content-Type': 'application/json',
+    'X-Auth-Token': 'xxxxxxxxxxxxxxxxx'
+  },
+  body: '{"product_id":4,"display_name":"Add-a-$5-Donation1535042499-187","type":"radio_buttons","config":{"default_value":"string","checked_by_default":true,"checkbox_label":"string","date_limited":true,"date_limit_mode":"range","date_earliest_value":"2018-08-31T00:00:00+00:00","date_latest_value":"2019-01-01T00:00:00+00:00","file_types_mode":"specific","file_types_supported":["images","documents","other"],"file_types_other":["pdf","txt"],"file_max_size":5,"text_characters_limited":true,"text_min_length":1,"text_max_length":55,"text_lines_limited":true,"text_max_lines":4,"number_limited":true,"number_limit_mode":"lowest","number_lowest_value":100,"number_highest_value":0,"number_integers_only":false,"product_list_adjusts_inventory":true,"product_list_adjusts_pricing":true,"product_list_shipping_calc":"weight"},"sort_order":1,"option_values":[{"is_default":false,"label":"Green","sort_order":0,"value_data":{},"id":0}],"image_url":"string"}'
+};
+
+fetch(url, options)
+  .then(res => res.json())
+  .then(json => console.log(json))
+  .catch(err => console.error('error:' + err));
+
+  

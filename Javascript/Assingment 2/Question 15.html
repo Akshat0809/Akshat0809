@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        array = [  {name:  "Jack" , age : 23},
+
+{name:  "Sam" , age : 12},
+
+{name:  "Max" , age : 20} ]
+
+del_index=+prompt("Enter Index to delete:")
+
+insert_index=+prompt("Enter Index to insert:")
+
+name=prompt("enter name to insert:")
+
+age=prompt("Enter age to insert:")
+
+if(del_index>=0&& del_index<array.length)
+
+{
+
+    array.splice(del_index,1);
+
+}
+
+if(insert_index>=0 && del_index<array.length)
+
+{
+
+    array.splice(insert_index,0,{name,age});
+
+}
+
+console.log(array);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

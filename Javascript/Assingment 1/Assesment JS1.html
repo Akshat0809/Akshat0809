@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // pattern1
+        function Pattern1() {
+        rows = prompt("Enter the values of rows; ",);
+        let pattern1 = "";
+for (let i = 1; i <= rows; i++) {
+   for (let j = 1; j <= rows; j++) {
+       if(j==i||j==rows-i+1)
+       pattern1 += "*";
+       else
+       pattern1+="&nbsp&nbsp";
+   }
+pattern1 +="<br\>";
+}
+document.write(pattern1);
+        }
+        
+        // pattern2
+        function Pattern2() 
+        {
+        let n=prompt("Enter the number of rows: ",);
+        let pattern2=""
+        for(let i=1;i<=n;i++)
+        {
+            for(let j=1;j<=n;j++)
+            {
+                if(i==1||i==n||j==1||j==n)
+                pattern2+="*"
+                else
+                pattern2+=" &nbsp"
+            }
+            pattern2+="<br/>"
+        }
+        document.write(pattern2)
+    }
+
+        // pattern3
+        function Pattern3() {
+
+n= prompt("Enter number of Rows: ");
+
+let pattern3="";
+
+for (let i=1;i<=n;i++)
+
+{
+
+    for(let j=1;j<=n-i;j++)
+
+    {
+
+        pattern3 +="&nbsp";
+ }
+
+    for(let k=1;k<=(2*i)-1;k++)
+
+    {
+
+        if(k==1||k==(2*i)-1)
+
+        pattern3 +="*";
+
+        else
+
+        pattern3+="&nbsp";
+
+    }
+
+    pattern3 +="<br/>";
+
+}
+
+for (let i=n-1;i>=1;i--)
+
+{
+
+    for(let j=1;j<=n-i;j++)
+
+    {
+
+        pattern3 +="&nbsp";
+
+    }
+
+    for(let k=1;k<=(2*i)-1;k++)
+
+    {
+
+        if(k==1||k==(2*i)-1)
+
+        pattern3 +="*";
+
+        else
+
+        pattern3+="&nbsp";
+
+    }
+
+     pattern3 +="<br/>";
+
+}
+
+document.write(pattern3);
+
+}
+       
+
+// pattern4
+function Pattern4() {
+let n=prompt("Enter the number of rows: ",);
+let pattern4=""
+for(i=1;i<n;i++)
+{
+    for(j=1;j<i;j++)
+    {
+        pattern4+="*"
+    }
+    pattern4+="<br/>"
+}
+    for(i=1;i<n;i++)
+    {
+        for(j=n-2;j>i;j--)
+        {
+            pattern4+="*";
+        }
+        pattern4+="<br/>";
+    }
+    document.write(pattern4)
+}
+
+// pattern5
+function Pattern5() {
+n=prompt("Enter the number of rows: ",);
+pattern5="";
+for(let i=1;i<n;i++)
+{
+    for(let j=1;j<i;j++)
+    {
+        pattern5+=" &nbsp";
+    }
+    for(let k=i;k<=n;k++)
+    {
+        pattern5+= k+" ";
+    }
+    pattern5+="<br/>";
+}
+for(let i=n;i>=1;i--)
+{
+    for(let j=i;j>1;j--)
+    {
+        pattern5+=" &nbsp";
+    }
+    for(let k=i;k<=n;k++)
+    {
+        pattern5+=k+" "
+    }
+    pattern5+="<br/>";
+}
+document.write(pattern5)
+}
+
+    </script>
+</head>
+<body>
+    <input type="button" value="Pattern 1" onclick="Pattern1()">
+    <input type="button" value="Pattern 2" onclick="Pattern2()">
+    <input type="button" value="Pattern 3" onclick="Pattern3()">
+    <input type="button" value="Pattern 4" onclick="Pattern4()">
+    <input type="button" value="Pattern 5" onclick="Pattern5()">
+</body>
+</html>

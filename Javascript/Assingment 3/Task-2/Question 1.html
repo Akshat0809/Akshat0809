@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let sportsgroup=[{
+Name: 'Ravindra',
+Sports: ['Chess', 'Cricket'],
+},
+{
+Name: 'Ravi',
+Sports: ['Cricket', 'Football'],
+},
+{
+Name: 'Rishabh',
+Sports: ['Table-Tennis', 'Football'],
+},]
+let st=new Set();
+let n=sportsgroup.length;
+for(let i=0;i<n;i++)
+{
+var l=sportsgroup[i].Sports.length;
+for(var j=0;j<l;j++)
+{
+st.add(sportsgroup[i].Sports[j]);
+}
+}
+let output = [] ;
+for(let val of st)
+{
+const obj = {} ;
+const arr1 = [] ;
+obj[val] = arr1 ;
+for(let j of sportsgroup)
+{
+if(j.Sports.includes(val))
+{
+arr1.push(j.Name) ;
+}
+}
+output.push(obj) ;
+}
+console.log(output) ;
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

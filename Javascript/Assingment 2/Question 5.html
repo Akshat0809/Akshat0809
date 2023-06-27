@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //union
+
+
+let array_a = [0,1,2,3]
+let array_b = [3,4,5]
+let arr=[];
+let i=0,j=0;
+while(i<array_a.length && j<array_b.length){
+
+    if(array_a[i] == array_b[j]){
+       arr.push(array_a[i]);
+        i++;
+        j++;
+    }
+    else if (array_a[i]<array_b[j]){
+        arr.push(array_a[i])
+        i++;
+    } else{
+        arr.push(array_b[j]);
+        j++;
+    }
+
+}
+while(i<array_a.length){
+    arr.push(array_a[i])
+    i++
+}
+while(j<array_b.length){
+    arr.push(array_b[j])
+    j++
+}
+document.write("Union "+arr);
+
+//intersection
+let arr1=[1,2,3,4]
+let arr2=[1,2,3,4,5]
+let arrinter=arr1.filter(item=>arr2.includes(item))
+document.write("<br\>inetersection :- "+arrinter);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

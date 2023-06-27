@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let date1=prompt("enter date1 , format of date 03/05/2020")
+
+let date2=prompt("enter date2")
+
+date1=date1.split('/')
+
+date2=date2.split('/')
+
+let year=(date2[2]-date1[2]+1)*12;
+
+let month=year-date1[1]-(12-date2[1]);
+
+let day=Math.abs(date1[0]-date2[0]);
+
+year=parseInt(month/12);
+
+month=month%12;
+
+document.write(year+" year "+month+" months "+day+" days")
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

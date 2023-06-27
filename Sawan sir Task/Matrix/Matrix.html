@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // For Turn in 90 degree
+        let matrix1=[[1,2,3],
+                    [4,5,6],
+                    [7,8,9]]
+let rows=matrix1.length;
+let col=matrix1[0].length; 
+matrix2=[[],[],[]];
+matrix3=[[],[],[]];
+document.write(rows);
+document.write("<br>");
+document.write(col);
+document.write("<br>");
+for(let i=0;i<rows;i++)
+{
+        for(let j=0;j<col;j++)
+        {
+                matrix2[i][j]=matrix1[j][i];
+        }
+}
+document.write("This is for 90 Degree <br>");
+for(let i=0;i<rows;i++)
+{
+     for(let j=0;j<col;j++)
+     {
+        document.write(matrix2[i][col-j-1]);
+     }
+        document.write("<br>");
+}
+
+// For turn into 180 degree
+document.write("<br><br>");
+document.write("This is for 180 degree");
+document.write("<br>");
+
+     for(let i=0;i<rows;i++)
+     {
+        for(let j=0;j<col;j++)
+        {
+            matrix3[i][j]=matrix1[rows-i-1][col-j-1];
+        }
+     }
+     for(let i=0;i<rows;i++)
+{
+     for(let j=0;j<col;j++)
+     {
+        document.write(matrix3[i][j]);
+     }
+        document.write("<br>");
+}
+
+     </script>   
+</body>
+</html>

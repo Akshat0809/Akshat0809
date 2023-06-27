@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String No loop</title>
+</head>
+<body>
+    <script>
+
+
+            // 1st solution 
+
+        // let str='**{{symbol}}::{{code}}--{{amount}}@@';
+        // let str='22{{code}}::{{symbol}}--{{amount}}##';
+        // let str='{{code}}::{{amount}}::{{symbol}}';
+        // let str='?-!{{code}}@{{symbol}}-{{amount}}';
+        // let str='*&^%3455{{code}}::{{amount}}::{{symbol}#$%^&2331';
+        // let str=prompt("Enter your string");
+        // let c=str.indexOf('{{symbol}}');
+        // let c1=str.indexOf('{{code}}');
+        // let c2=str.indexOf('{{amount}}');
+        // if(str=='{{symbol}}'){
+        //     alert("");
+        // }
+        // else if(c<c1&&c<c2){
+        //     let p=str.substring(0,c1);
+        //    let s= str.replace(p,'');
+        //    let c3=(s.indexOf('{{amount}}'));
+        //    let c4=s.length;
+        //    let m=s.substring(c3+10,c4);
+        //    let s1=s.replace(m,'');
+        //    alert(s1);
+        // }
+        // else if(c>c1&&c<c2){
+        //     let p=str.substring(c,c2);
+        //     let s=str.replace(p,'');
+        //     let l=s.length;
+        //     let c3=s.indexOf('{{code}}');
+        //     let c4=s.indexOf('{{amount}}');            
+        //     let s1=s.substring(0,c3);
+        //     let s2=s.substring(c4+10,l);
+        //     let s3=s.replace(s1,"");
+        //     let s4=s3.replace(s2,"");
+        //     alert(s4);
+        // }
+        // else if(c>c1&&c>c2){
+        //     let p=str.substring(0,c2+10);
+        //     alert(p);
+        // }
+
+        // 2nd Solution
+        let string=prompt("Enter the string: ");
+        remove(string);
+
+        function remove(str){
+           let start=str.indexOf("{{");
+           let end=str.lastIndexOf("}}");
+
+           str=str.slice(start,end+1);
+           symbolInd=str.indexOf("{{symbol}}");
+           symbolend=str.indexOf("{{",symbolInd+10);
+
+           str=str.slice(0,symbolInd)+str.slice(symbolend,str.length);
+           if(str=="{{symbol}}"){
+            console.log("");
+           }
+           else if(str.includes("{{symbol}}")){
+            console.log(str);
+           }
+           else{
+            console.log(str);
+           }
+        }
+
+    </script>
+</body>
+</html>

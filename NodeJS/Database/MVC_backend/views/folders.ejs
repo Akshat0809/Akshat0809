@@ -1,0 +1,21 @@
+ <!DOCTYPE html>
+<html>
+<head>
+  <title>Folders</title>
+</head>
+<body>
+  <h1>Folders</h1>
+  <div>
+    <%folders.forEach((itr)=>{%>
+      <p><%=itr.name%></p>
+     <button><a href="/delete/<%= itr.folder_id %>">delete</a></button> <br>
+    <button>  <a href="/edit/<%= itr.folder_id%>">update</a></button> <br>
+  <%  })%>
+  <br><button>  <a href="/add_folder">Add Folder</a></button> <br>
+</div>
+
+<!-- <div>
+  <a href="/add_folder">Add folder</a>
+</div> -->
+</body>
+</html>
